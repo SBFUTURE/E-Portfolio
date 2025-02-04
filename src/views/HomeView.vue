@@ -169,7 +169,7 @@ export default {
 /* Infinite Scroll Animation */
 .skills-slider {
   display: flex;
-  animation: scroll-slider 20s linear infinite;  /* Adjust duration as needed */
+  animation: scroll-slider 30s linear infinite;  /* Adjust duration as needed */
 }
 
 @keyframes scroll-slider {
