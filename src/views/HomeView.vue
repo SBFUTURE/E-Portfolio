@@ -24,7 +24,7 @@
         </div>
         <div class="md:w-1/2 flex justify-center mt-6 md:mt-0">
           <img 
-            src="https://via.placeholder.com/300" 
+            src="@/assets/profile.jpeg" 
             alt="Profile Picture" 
             class="w-72 h-72 rounded-full shadow-lg object-cover" 
           />
