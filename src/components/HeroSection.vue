@@ -25,7 +25,13 @@
   
   <script>
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-  
+  // Import the specific icons you need
+  import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+  import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+  import { library } from '@fortawesome/fontawesome-svg-core';
+
+  // Add icons to the library
+  library.add(faGithub, faLinkedin, faEnvelope);
   export default {
     components: {
       FontAwesomeIcon,
