@@ -5,8 +5,9 @@
         <router-link to="/">STEPHEN BOMBEKE</router-link>
       </div>
       <div>
-        <router-link to="/about" class="text-white hover:text-gray-300 px-3 font-semibold text-xl">About Us</router-link>
-        <router-link to="/blog" class="text-white hover:text-gray-300 px-3 font-semibold text-xl">Blogs</router-link>
+        <router-link to="/projects" class="text-white hover:text-gray-300 px-3 font-semibold text-xl">My Projects</router-link>
+        <router-link to="/events" class="text-white hover:text-gray-300 px-3 font-semibold text-xl">Events</router-link>
+        <router-link to="/international-experiences" class="text-white hover:text-gray-300 px-3 font-semibold text-xl">International Experiences</router-link>
       </div>
     </div>
   </nav>
