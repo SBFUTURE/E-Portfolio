@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="md:w-1/2 flex justify-center mt-6 md:mt-0">
-          <img src="@/assets/profile.jpeg" alt="Profile Picture" class="w-72 h-72 rounded-full shadow-lg object-cover" />
+          <img src="@/assets/HeroPictures/profile.jpeg" alt="Profile Picture" class="w-72 h-72 rounded-full shadow-lg object-cover" />
         </div>
       </div>
     </section>

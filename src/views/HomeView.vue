@@ -18,9 +18,10 @@ import AboutSection from '@/components/AboutSection.vue';
 import SkillsSection from '@/components/SkillsSection.vue';
 import ContactSection from '@/components/ContactSection.vue';
 import Footer from '@/components/Footer.vue';
-import html5Logo from '@/assets/html5Logo.png';
-import blazorLogo from '@/assets/blazorLogo.png';
-import javaLogo from '@/assets/javaLogo.png';
+import html5Logo from '@/assets/SkillsPictures/html5Logo.png';
+import blazorLogo from '@/assets/SkillsPictures/blazorLogo.png';
+import javaLogo from '@/assets/SkillsPictures/javaLogo.png';
+import mongoLogo from '@/assets/SkillsPictures/MongoDb.png';
 
 export default {
   name: 'HomeView',
@@ -44,10 +45,17 @@ export default {
         { img: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg', name: 'Linux' },
         { img: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg', name: 'Node.js' },
         { img: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', name: 'JavaScript' },
+        { img: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg', name: 'Git' },
+        { img: mongoLogo, name: 'MongoDB' },
+        { img: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png', name: 'SQL' },
         { img: blazorLogo, name: 'Blazor' },
-        { img: javaLogo, name: 'Java' }
+        { img: javaLogo, name: 'Java' },
       ]
     };
   }
-};
+}
 </script>
+
+<style scoped>
+/* Add your styles here */
+</style>
