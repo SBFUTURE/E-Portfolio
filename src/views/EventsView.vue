@@ -9,27 +9,34 @@
         <h3 class="text-3xl font-bold text-[#1E3A8A] mb-4">{{ blog.title }}</h3>
 
         <!-- Blog Introduction -->
-        <p v-if="!blog.showFullContent" class="text-gray-700 mb-4">{{ blog.introduction }}</p>
+        <div class="mb-4">
+          <img :src="blog.introImage" alt="Event Introduction Image" class="w-full h-auto rounded-lg mb-6" />
+          <p v-if="!blog.showFullContent" class="text-gray-700 mb-4">{{ blog.introduction }}</p>
+        </div>
 
         <!-- Full Blog Content (hidden initially) -->
         <div v-if="blog.showFullContent" class="text-gray-700 mb-4 space-y-4">
           <div class="space-y-2">
             <h4 class="text-2xl font-semibold text-[#1E3A8A]">AI and Cybersecurity: Insights from the Colt Customer Event</h4>
+            <img :src="blog.eventImage" alt="AI and Cybersecurity Session" class="w-full h-auto rounded-lg mb-4" />
             <p>On October 17th, I had the privilege of attending the Colt Customer Event, held in partnership with Omdia. The event provided valuable insights into the intersection of artificial intelligence (AI) and cybersecurity, featuring presentations from leading experts in the field. We discussed how AI is transforming cybersecurity and the importance of implementing responsible, ethical frameworks to ensure secure AI deployment.</p>
           </div>
 
           <div class="space-y-2">
             <h4 class="text-2xl font-semibold text-[#1E3A8A]">Exploring AI's Impact on Cybersecurity</h4>
+            <img :src="blog.aiCybersecurityImage" alt="AI in Cybersecurity" class="w-full h-auto rounded-lg mb-4" />
             <p>As AI continues to revolutionize cybersecurity, businesses must balance its immense potential with the challenges it brings. At the event, we explored the role AI plays in detecting threats, enhancing network security, and improving compliance. However, it’s also clear that AI introduces new vulnerabilities and complexities, making careful integration essential to mitigating risk.</p>
           </div>
 
           <div class="space-y-2">
             <h4 class="text-2xl font-semibold text-[#1E3A8A]">Networking and Collaboration with Industry Peers</h4>
+            <img :src="blog.networkingImage" alt="Networking Session" class="w-full h-auto rounded-lg mb-4" />
             <p>Networking with fellow professionals from various industries was one of the highlights of the event. It provided a valuable opportunity to exchange ideas, share experiences, and discuss best practices for incorporating AI into cybersecurity strategies. These conversations deepened my understanding of the current challenges and the forward-thinking solutions organizations are exploring to stay ahead of emerging threats.</p>
           </div>
 
           <div class="space-y-2">
             <h4 class="text-2xl font-semibold text-[#1E3A8A]">The Drone Initiation: A Fun and Engaging Activity</h4>
+            <img :src="blog.droneInitiationImage" alt="Drone Initiation Session" class="w-full h-auto rounded-lg mb-4" />
             <p>In addition to insightful discussions, the event featured an exciting drone initiation session. Participants had the chance to try their hand at flying drones, navigating through an obstacle course. My team was thrilled to win the tournament, adding a fun, interactive element to the event that made it even more memorable.</p>
           </div>
 
@@ -62,7 +69,21 @@ export default {
       blogs: [
         {
           title: "Insights from the Colt Customer Event 2024: AI & Cybersecurity",
-          introduction: `On October 17th, I participated in the Colt Customer Event, held in partnership with Omdia. The event offered a deep dive into AI’s role in cybersecurity, with valuable insights shared by industry experts. Networking with peers and the engaging drone initiation session made this a memorable and insightful experience.`,
+          introImage: "@/assets/intro-image.jpg", // Example image for intro
+          eventImage: "@/assets/event-ai-cybersecurity.jpg", // Image for event section
+          aiCybersecurityImage: "@/assets/ai-cybersecurity.jpg", // Image for AI Cybersecurity
+          networkingImage: "@/assets/networking-session.jpg", // Image for networking
+          droneInitiationImage: "@/assets/drone-session.jpg", // Image for drone initiation
+          introduction: `
+            On October 17th, I had the pleasure of attending the Colt Customer Event, hosted in collaboration with Omdia. 
+            This event brought together a wide range of industry experts to explore the intersection of artificial intelligence (AI) and cybersecurity. 
+            
+            As businesses face an increasingly complex digital landscape, the role of AI in enhancing cybersecurity strategies has never been more critical. 
+            The event provided an excellent opportunity to learn about the latest advancements in AI and its potential to revolutionize threat detection, risk management, and compliance in the field of cybersecurity.
+
+            Another exciting element of the event was the chance to network with professionals from various industries. The diverse discussions helped me gain new insights into how different organizations are leveraging AI to enhance their cybersecurity measures. 
+            
+            We also enjoyed a fun and engaging drone initiation session, which provided a perfect balance to the deep discussions around AI and cybersecurity. The event was an exciting opportunity to deepen my knowledge and exchange valuable ideas with peers.`,
           fullContent: `The Colt Customer Event, in collaboration with Omdia, provided in-depth discussions on how AI is transforming cybersecurity. We explored how businesses can effectively integrate AI while managing its associated risks. AI is not only revolutionizing the way cybersecurity threats are detected but also posing new challenges in securing networks and maintaining compliance. 
 
             One key takeaway from the event was the importance of creating responsible, ethical AI frameworks. Ensuring transparency, accountability, and proper risk management are critical to successfully deploying AI in cybersecurity.
