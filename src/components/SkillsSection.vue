@@ -34,7 +34,7 @@
   .marquee-content {
     display: flex;
     width: max-content;
-    animation: marquee-scroll 15s linear infinite;
+    animation: marquee-scroll 30s linear infinite;
   }
   @keyframes marquee-scroll {
     from { transform: translateX(0); }
