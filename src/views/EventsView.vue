@@ -11,45 +11,12 @@
         <!-- Blog Introduction -->
         <div class="mb-4">
           <img :src="blog.introImage" alt="Event Introduction Image" class="w-full h-auto rounded-lg mb-6" />
-          <p v-if="!blog.showFullContent" class="text-gray-700 mb-4">{{ blog.introduction }}</p>
+          <p class="text-gray-700 mb-4">{{ blog.introduction }}</p>
         </div>
 
-        <!-- Full Blog Content (hidden initially) -->
-        <div v-if="blog.showFullContent" class="text-gray-700 mb-4 space-y-4">
-          <div class="space-y-2">
-            <h4 class="text-2xl font-semibold text-[#1E3A8A]">AI and Cybersecurity: Insights from the Colt Customer Event</h4>
-            <img :src="blog.eventImage" alt="AI and Cybersecurity Session" class="w-full h-auto rounded-lg mb-4" />
-            <p>On October 17th, I had the privilege of attending the Colt Customer Event, held in partnership with Omdia. The event provided valuable insights into the intersection of artificial intelligence (AI) and cybersecurity, featuring presentations from leading experts in the field. We discussed how AI is transforming cybersecurity and the importance of implementing responsible, ethical frameworks to ensure secure AI deployment.</p>
-          </div>
-
-          <div class="space-y-2">
-            <h4 class="text-2xl font-semibold text-[#1E3A8A]">Exploring AI's Impact on Cybersecurity</h4>
-            <img :src="blog.aiCybersecurityImage" alt="AI in Cybersecurity" class="w-full h-auto rounded-lg mb-4" />
-            <p>As AI continues to revolutionize cybersecurity, businesses must balance its immense potential with the challenges it brings. At the event, we explored the role AI plays in detecting threats, enhancing network security, and improving compliance. However, it’s also clear that AI introduces new vulnerabilities and complexities, making careful integration essential to mitigating risk.</p>
-          </div>
-
-          <div class="space-y-2">
-            <h4 class="text-2xl font-semibold text-[#1E3A8A]">Networking and Collaboration with Industry Peers</h4>
-            <img :src="blog.networkingImage" alt="Networking Session" class="w-full h-auto rounded-lg mb-4" />
-            <p>Networking with fellow professionals from various industries was one of the highlights of the event. It provided a valuable opportunity to exchange ideas, share experiences, and discuss best practices for incorporating AI into cybersecurity strategies. These conversations deepened my understanding of the current challenges and the forward-thinking solutions organizations are exploring to stay ahead of emerging threats.</p>
-          </div>
-
-          <div class="space-y-2">
-            <h4 class="text-2xl font-semibold text-[#1E3A8A]">The Drone Initiation: A Fun and Engaging Activity</h4>
-            <img :src="blog.droneInitiationImage" alt="Drone Initiation Session" class="w-full h-auto rounded-lg mb-4" />
-            <p>In addition to insightful discussions, the event featured an exciting drone initiation session. Participants had the chance to try their hand at flying drones, navigating through an obstacle course. My team was thrilled to win the tournament, adding a fun, interactive element to the event that made it even more memorable.</p>
-          </div>
-
-          <div class="space-y-2">
-            <h4 class="text-2xl font-semibold text-[#1E3A8A]">Takeaways and Looking Ahead</h4>
-            <p>The Colt Customer Event, in partnership with Omdia, was an invaluable experience that highlighted the growing importance of AI in cybersecurity. It provided insights into the risks and rewards of adopting AI, and the importance of a thoughtful, ethical approach to its implementation. I left the event with a deeper understanding of AI's impact and the strategies businesses must adopt to navigate this evolving landscape.</p>
-            <p>If you’re interested in exploring any of these topics further, or have any questions, feel free to reach out to your account manager or respond to the email from Colt. I look forward to attending future Colt events and continuing to learn from industry leaders and peers alike.</p>
-          </div>
-        </div>
-
-        <!-- Read More / Show Less Toggle -->
-        <button @click="toggleContent(index)" class="bg-[#1E3A8A] text-white py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 mt-4">
-          {{ blog.showFullContent ? 'Show Less' : 'Read More' }}
+        <!-- Read More Button - Navigate to Event Detail Page -->
+        <button @click="goToEventDetailView(blog.id)" class="bg-[#1E3A8A] text-white py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 mt-4">
+          Read More
         </button>
       </div>
     </div>
@@ -68,41 +35,41 @@ export default {
     return {
       blogs: [
         {
+          id: 1,
+          title: "Exploring Baserow: A Game-Changer for Data Storage",
+          introImage: "@/assets/baserow-intro-image.jpg", // Example image for intro
+          introduction: `
+            At Howest University in November 2024, I had the privilege of attending a Tech&Meet session that introduced me to Baserow, an innovative open-source platform designed for building and managing databases without needing any prior coding knowledge. Baserow aims to simplify database creation and empower individuals from all backgrounds, whether you're a developer or not, to manage data effortlessly. During the event, 
+            I was fascinated by how this tool makes complex tasks like data management and automation accessible to everyone, regardless of their technical skill set. 
+          `,
+          fullContent: `
+            Baserow allows users to build databases without writing any code, using a simple, user-friendly interface. 
+            The demo I saw made it clear that deploying a Docker container and setting up a database can be done within minutes. 
+            Furthermore, the ability to integrate automation into your data management is a huge bonus. I’m excited to see what this platform can do in the future.
+          `,
+        },
+        {
+          id: 2,
           title: "Insights from the Colt Customer Event 2024: AI & Cybersecurity",
           introImage: "@/assets/intro-image.jpg", // Example image for intro
-          eventImage: "@/assets/event-ai-cybersecurity.jpg", // Image for event section
-          aiCybersecurityImage: "@/assets/ai-cybersecurity.jpg", // Image for AI Cybersecurity
-          networkingImage: "@/assets/networking-session.jpg", // Image for networking
-          droneInitiationImage: "@/assets/drone-session.jpg", // Image for drone initiation
           introduction: `
             On October 17th, I had the pleasure of attending the Colt Customer Event, hosted in collaboration with Omdia. 
             This event brought together a wide range of industry experts to explore the intersection of artificial intelligence (AI) and cybersecurity. 
-            
-            As businesses face an increasingly complex digital landscape, the role of AI in enhancing cybersecurity strategies has never been more critical. 
-            The event provided an excellent opportunity to learn about the latest advancements in AI and its potential to revolutionize threat detection, risk management, and compliance in the field of cybersecurity.
-
-            Another exciting element of the event was the chance to network with professionals from various industries. The diverse discussions helped me gain new insights into how different organizations are leveraging AI to enhance their cybersecurity measures. 
-            
-            We also enjoyed a fun and engaging drone initiation session, which provided a perfect balance to the deep discussions around AI and cybersecurity. The event was an exciting opportunity to deepen my knowledge and exchange valuable ideas with peers.`,
-          fullContent: `The Colt Customer Event, in collaboration with Omdia, provided in-depth discussions on how AI is transforming cybersecurity. We explored how businesses can effectively integrate AI while managing its associated risks. AI is not only revolutionizing the way cybersecurity threats are detected but also posing new challenges in securing networks and maintaining compliance. 
-
-            One key takeaway from the event was the importance of creating responsible, ethical AI frameworks. Ensuring transparency, accountability, and proper risk management are critical to successfully deploying AI in cybersecurity.
-
-            Networking with peers from various companies was another highlight, as it allowed us to discuss practical challenges, share experiences, and learn from one another. The event also featured a fun and interactive drone initiation session. Participants formed teams to fly drones through a challenging obstacle course, and my team emerged victorious!
-
-            Overall, the Colt Customer Event was a valuable opportunity to deepen my understanding of AI’s role in cybersecurity and to connect with like-minded professionals. Looking ahead, I’m excited to apply the insights gained and stay engaged with the ongoing conversation around AI, cybersecurity, and digital transformation.`
+            As businesses face an increasingly complex digital landscape, the role of AI in enhancing cybersecurity strategies has never been more critical.
+          `,
+          fullContent: `
+            The Colt Customer Event provided in-depth discussions on how AI is transforming cybersecurity. 
+            We explored how businesses can effectively integrate AI while managing its associated risks. 
+            AI is not only revolutionizing the way cybersecurity threats are detected but also posing new challenges in securing networks and maintaining compliance.
+          `,
         }
       ]
     };
   },
   methods: {
-    toggleContent(index) {
-      this.blogs[index].showFullContent = !this.blogs[index].showFullContent;
+      goToEventDetailView(id) {
+      this.$router.push({ name: 'eventDetailView', params: { id } });  // Ensure the route name matches
     }
   }
 };
 </script>
-
-<style scoped>
-/* Optional: Additional styling if needed, but Tailwind should handle most of it */
-</style>
