@@ -1,23 +1,30 @@
 <template>
   <NavBar />
   <section id="events" class="bg-blue-50 py-20">
-    <div class="container mx-auto px-6">
+    <div class="w-full"> <!-- Remove px-2 here -->
       <h2 class="text-4xl font-semibold text-[#1E3A8A] mb-8 text-center">Recent Events & Insights</h2>
-
-      <div v-for="(blog, index) in blogs.slice().reverse()" :key="blog.id" class="blog-post mb-12 bg-white shadow-lg rounded-lg p-6">
-        <!-- Blog Title -->
-        <h3 class="text-3xl font-bold text-[#1E3A8A] mb-4">{{ blog.title }}</h3>
-        <p class="italic text-[#1E3A8A] mb-4">{{ blog.date }}</p>
-        <!-- Blog Introduction -->
-        <div class="mb-4">
-          <img :src="blog.introImage" alt="Event Introduction" class="w-full h-auto rounded-lg mb-6" />
-          <p class="text-gray-700 mb-4">{{ blog.introduction }}</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-8 px-16"> <!-- Add px-16 to match gap-x-16 -->
+        <div
+          v-for="(blog, index) in blogs.slice().reverse()"
+          :key="blog.id"
+          class="blog-post bg-white shadow-lg rounded-lg p-6 flex flex-col"
+        >
+          <!-- Blog Title -->
+          <h3 class="text-3xl font-bold text-[#1E3A8A] mb-4">{{ blog.title }}</h3>
+          <p class="italic text-[#1E3A8A] mb-4">{{ blog.date }}</p>
+          <!-- Blog Introduction -->
+          <div class="mb-4">
+            <img :src="blog.introImage" alt="Event Introduction" class="w-full h-auto rounded-lg mb-6" />
+            <p class="text-gray-700 mb-4">{{ blog.introduction }}</p>
+          </div>
+          <!-- Read More Button -->
+          <button
+            @click="goToEventDetailView(blog.id)"
+            class="bg-[#1E3A8A] text-white py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 mt-auto"
+          >
+            Read More
+          </button>
         </div>
-
-        <!-- Read More Button - Navigate to Event Detail Page -->
-        <button @click="goToEventDetailView(blog.id)" class="bg-[#1E3A8A] text-white py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 mt-4">
-          Read More
-        </button>
       </div>
     </div>
   </section>
@@ -49,7 +56,7 @@ export default {
           id: 2,
           title: "Exploring Baserow: A Game-Changer for Data Storage",
           date: "22 October 2024",
-          introImage: "@/assets/baserow-intro-image.jpg", // Example image for intro
+          introImage: "@/assets/images/events/Baserow/Event-Baserow.jpeg", // Example image for intro
           introduction: `
             At Howest University in October 2024, I had the privilege of attending a Tech&Meet session that introduced me to Baserow, an innovative open-source platform designed for building and managing databases without needing any prior coding knowledge. Baserow aims to simplify database creation and empower individuals from all backgrounds, whether you're a developer or not, to manage data effortlessly. During the event, 
             I was fascinated by how this tool makes complex tasks like data management and automation accessible to everyone, regardless of their technical skill set. 
@@ -121,6 +128,16 @@ export default {
         },
         {
           id: 9,
+          title: "Ethical Hacking Workshop – Handelsschool Aalst",
+          date: "28 January 2025",
+          introImage: "@/assets/aalst-workshop.jpg",
+          introduction: `
+            On Tuesday 28 January, we had the opportunity to lead a hands-on ethical hacking workshop for the 6th-year students of Application and Data Management at Handelsschool Aalst. 
+            We explored the basics of cybersecurity, diving into SQL Injection, XSS, and IDOR—all in a fun and interactive classroom setting.
+          `,
+        },
+        {
+          id: 10,
           title: "Intern Ignite Event – Deloitte",
           date: "20 February 2025",
           introImage: "@/assets/deloitte-ignite.jpg",

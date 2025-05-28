@@ -281,6 +281,34 @@ export default {
             },
             {
               id: 9,
+              title: "Ethical Hacking Workshop – Handelsschool Aalst",
+              introImage: "@/assets/aalst-workshop.jpg",
+              introduction: "Cybersecurity is more vital than ever in today’s world. On 28 January, we had the pleasure of giving an ethical hacking workshop to the students of the Handelsschool in Aalst, focusing on practical, hands-on techniques for discovering and understanding common web vulnerabilities.",
+              sections: [
+                {
+                  title: "Interactive Pentesting in the Classroom",
+                  image: "@/assets/aalst-intro.jpg",
+                  content: "Together with Evarist Verstraete, we hosted an ethical hacking session for 6th-year Application and Data Management students. The goal was to give them a real-world taste of penetration testing—right in the classroom."
+                },
+                {
+                  title: "Core Topics in Cybersecurity",
+                  image: "@/assets/aalst-topics.jpg",
+                  content: "We introduced and demonstrated vulnerabilities such as SQL Injection, Cross-Site Scripting (XSS), and Insecure Direct Object References (IDOR). Each topic was accompanied by hands-on examples, allowing students to understand both how the attacks work and how to defend against them."
+                },
+                {
+                  title: "Safe, Controlled & Educational",
+                  image: "@/assets/aalst-lab.jpg",
+                  content: "The workshop was conducted in a controlled lab environment, ensuring students could explore these concepts ethically and safely. Their curiosity and engagement made the experience both fun and impactful."
+                },
+                {
+                  title: "Inspiring the Next Generation",
+                  image: "@/assets/aalst-wrapup.jpg",
+                  content: "Cybersecurity is a growing field with enormous importance. Events like these help spark interest and plant the seeds for future careers in ethical hacking and cyber defense. A big thank you to Handelsschool Aalst for welcoming us and making this possible!"
+                }
+              ]
+            },
+            {
+              id: 10,
               title: "Intern Ignite Event – Deloitte",
               introImage: "@/assets/deloitte-ignite.jpg",
               introduction: "On Thursday, 20 February, we had the opportunity to attend an exciting event at Deloitte’s Zaventem office. The afternoon was packed with breakout sessions, interactive activities, and opportunities to connect with professionals across the company.",

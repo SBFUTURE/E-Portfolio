@@ -6,7 +6,7 @@
           Feel free to reach out for collaborations, job opportunities, or just a friendly chat about technology!
         </p>
         <div class="flex justify-center">
-          <a href="mailto:Stephen.Bombeke@gmail.com" class="bg-[#1E3A8A] text-white py-3 px-6 rounded-lg hover:bg-blue-800 transition-all duration-300">
+          <a href="mailto:Stephen.Bombeke@gmail.com" class="bg-[#1E3A8A] text-white py-3 px-6 rounded-lg hover:bg-blue-800 transition-all duration-300" target="_blank">
             <font-awesome-icon :icon="['fas', 'envelope']" class="mr-2" /> Email Me
           </a>
         </div>
