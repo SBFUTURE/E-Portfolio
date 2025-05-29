@@ -43,7 +43,8 @@ import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import baserowImg from '@/assets/images/events/Baserow/Event-Baserow.jpeg';
 import coltIntroImg from '@/assets/images/events/colt-event/IntroImage.png';
-
+import coltTeamPicture from '@/assets/images/events/colt-event/TeamPicture.png';
+import droneSession from '@/assets/images/events/colt-event/DroneEvent.png';
 export default {
 
   name: 'EventDetailView',
@@ -66,28 +67,25 @@ export default {
               "sections": [
                 {
                   "title": "AI and Cybersecurity: Insights from the Colt Event",
-                  "image": "@/assets/event-ai-cybersecurity.jpg",
                   "content": "On October 17th, I had the privilege of attending the Colt Customer Event, held in collaboration with Omdia. This event brought together a wide range of industry experts to explore the intersection of AI and cybersecurity. It provided insights into how AI is enhancing cybersecurity strategies."
                 },
                 {
                   "title": "Exploring AI's Impact on Cybersecurity",
-                  "image": "@/assets/ai-cybersecurity.jpg",
                   "content": "AI is transforming how cybersecurity measures are implemented. From detecting threats faster to automating risk management, AI offers innovative solutions. However, the complexity of implementing AI solutions while maintaining security and compliance is a challenge."
                 },
                 {
                   "title": "Networking with Industry Peers",
-                  "image": "@/assets/networking-session.jpg",
+                  "image": coltTeamPicture,
                   "content": "One of the best parts of the event was the networking opportunities. Connecting with peers from other industries provided a valuable exchange of ideas, experiences, and best practices for integrating AI in cybersecurity."
                 },
                 {
                   "title": "Drone Initiation: A Fun Activity",
-                  "image": "@/assets/drone-session.jpg",
+                  "image": droneSession,
                   "content": "Beyond the deep discussions, the event featured a drone initiation session. Participants competed in an obstacle course with drones, and my team was lucky enough to win the tournament!"
                 },
                 {
                   "title": "Looking Ahead in Cybersecurity",
-                  "image": "@/assets/future-cybersecurity.jpg",
-                  "content": "The event reinforced the critical importance of integrating AI into cybersecurity strategies while carefully considering its risks. I look forward to seeing how AI continues to shape the future of cybersecurity."
+                  "content": "The event reinforced the criticalmportance of integrating AI into cybersecurity strategies while carefully considering its risks. I look forward to seeing how AI continues to shape the future of cybersecurity."
                 }
               ]
             },
