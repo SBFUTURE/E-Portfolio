@@ -32,7 +32,8 @@
 
 <script>
 import NavBar from '@/components/NavBar.vue';
-
+import baserowImg from '@/assets/images/events/Baserow/Event-Baserow.jpeg';
+import coltIntroImg from '@/assets/images/events/colt-event/IntroImage.png';
 export default {
   name: "EventsView",
   components: {
@@ -45,7 +46,7 @@ export default {
           id: 1,
           title: "Insights from the Colt Customer Event: AI & Cybersecurity",
           date:"17 October 2024",
-          introImage: "@/assets/intro-image.jpg", // Example image for intro
+          introImage: coltIntroImg, 
           introduction: `
             On October 17th, I had the pleasure of attending the Colt Customer Event, hosted in collaboration with Omdia. 
             This event brought together a wide range of industry experts to explore the intersection of artificial intelligence (AI) and cybersecurity. 
@@ -56,7 +57,7 @@ export default {
           id: 2,
           title: "Exploring Baserow: A Game-Changer for Data Storage",
           date: "22 October 2024",
-          introImage: "@/assets/images/events/Baserow/Event-Baserow.jpeg", // Example image for intro
+          introImage: baserowImg, 
           introduction: `
             At Howest University in October 2024, I had the privilege of attending a Tech&Meet session that introduced me to Baserow, an innovative open-source platform designed for building and managing databases without needing any prior coding knowledge. Baserow aims to simplify database creation and empower individuals from all backgrounds, whether you're a developer or not, to manage data effortlessly. During the event, 
             I was fascinated by how this tool makes complex tasks like data management and automation accessible to everyone, regardless of their technical skill set. 

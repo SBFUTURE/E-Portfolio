@@ -17,15 +17,15 @@
         </div>
 
         <!-- Event Title -->
+        <img :src="event.introImage" alt="Event Introduction" class="w-1/2 max-h-50  mx-auto rounded-lg mb-6" />
         <h2 class="text-4xl font-semibold text-[#1E3A8A] mb-8">{{ event.title }}</h2>
-        <img :src="event.introImage" alt="Event Introduction" class="w-full h-auto rounded-lg mb-6" />
         <p class="text-gray-700 mb-4">{{ event.introduction }}</p>
         
         <!-- Full Event Content -->
         <div class="space-y-6 text-gray-700">
           <div v-for="(section, index) in event.sections" :key="index" class="space-y-4">
             <h3 class="text-2xl font-semibold text-[#1E3A8A]">{{ section.title }}</h3>
-            <img :src="section.image" alt="Event Section" class="w-full h-auto rounded-lg mb-4" />
+            <img v-if="section.image" :src="section.image" alt="Event Section" class="w-full h-auto rounded-lg mb-4" />
             <p>{{ section.content }}</p>
           </div>
         </div>
@@ -41,16 +41,19 @@
 import NavBar from '@/components/NavBar.vue';
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
+import baserowImg from '@/assets/images/events/Baserow/Event-Baserow.jpeg';
+import coltIntroImg from '@/assets/images/events/colt-event/IntroImage.png';
 
 export default {
+
   name: 'EventDetailView',
   components: {
     NavBar
   },
-  props: ['id'],  // Accept the 'id' prop from the route
+  props: ['id'],
 
   setup(props) {
-    const router = useRouter();  // Initialize Vue Router
+    const router = useRouter();
     const event = ref(null);
 
     const fetchEventDetails = () => {
@@ -58,7 +61,7 @@ export default {
             {
               "id": 1,
               "title": "Insights from the Colt Customer Event 2024: AI & Cybersecurity",
-              "introImage": "@/assets/intro-image.jpg",
+              "introImage": coltIntroImg,
               "introduction": "The Colt Customer Event provided in-depth discussions on how AI is transforming cybersecurity. We explored how businesses can effectively integrate AI while managing its associated risks. AI is not only revolutionizing the way cybersecurity threats are detected but also posing new challenges in securing networks and maintaining compliance.",
               "sections": [
                 {
@@ -91,22 +94,19 @@ export default {
             {
               "id": 2,
               "title": "Exploring Baserow: A Game-Changer for Data Storage",
-              "introImage": "@/assets/baserow-intro-image.jpg",
+              "introImage": baserowImg,
               "introduction": "Baserow allows users to build databases without writing any code, using a simple, user-friendly interface. The demo I saw made it clear that deploying a Docker container and setting up a database can be done within minutes. Furthermore, the ability to integrate automation into your data management is a huge bonus. I’m excited to see what this platform can do in the future.",
               "sections": [
                 {
                   "title": "Introduction to Baserow",
-                  "image": "@/assets/baserow-intro-image.jpg",
                   "content": "Baserow is an innovative open-source platform designed to help users manage databases with no coding required. It allows users to build, design, and manage databases effortlessly with a clean and intuitive interface."
                 },
                 {
                   "title": "Real-World Applications",
-                  "image": "@/assets/baserow-use-case.jpg",
                   "content": "From small businesses to large enterprises, Baserow makes it easy for any organization to adopt database management tools. During the demo, we saw how you can deploy Docker containers and set up the database within minutes. The platform is ideal for teams that need to store and organize data without relying on expensive, complex solutions."
                 },
                 {
                   "title": "Future of Data Management",
-                  "image": "@/assets/baserow-future.jpg",
                   "content": "Looking ahead, Baserow has the potential to revolutionize the way databases are built and managed. With its open-source nature and user-centric design, Baserow promises to make managing data easier, more efficient, and accessible to everyone."
                 }
               ]
