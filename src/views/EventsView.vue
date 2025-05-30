@@ -1,9 +1,9 @@
 <template>
   <NavBar />
   <section id="events" class="bg-blue-50 py-20">
-    <div class="w-full"> <!-- Remove px-2 here -->
+    <div class="w-full"> 
       <h2 class="text-4xl font-semibold text-[#1E3A8A] mb-8 text-center">Recent Events & Insights</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-8 px-16"> <!-- Add px-16 to match gap-x-16 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-8 px-16">
         <div
           v-for="(blog, index) in blogs.slice().reverse()"
           :key="blog.id"
