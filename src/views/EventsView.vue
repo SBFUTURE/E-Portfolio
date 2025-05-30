@@ -14,7 +14,7 @@
           <p class="italic text-[#1E3A8A] mb-4">{{ blog.date }}</p>
           <!-- Blog Introduction -->
           <div class="mb-4">
-            <img :src="blog.introImage" alt="Event Introduction" class="w-full h-auto rounded-lg mb-6" />
+            <img v-if="blog.introImage" :src="blog.introImage" alt="Event Introduction" class="w-full h-auto rounded-lg mb-6" />
             <p class="text-gray-700 mb-4">{{ blog.introduction }}</p>
           </div>
           <!-- Read More Button -->
@@ -34,6 +34,13 @@
 import NavBar from '@/components/NavBar.vue';
 import baserowImg from '@/assets/images/events/Baserow/Event-Baserow.jpeg';
 import coltIntroImg from '@/assets/images/events/colt-event/IntroImage.png';
+import cyberIntro from '@/assets/images/events/CyberCommand/CyberCommandIntro.jpeg';
+import introHtf from '@/assets/images/events/HackTheFuture/IntroHTF.png';
+import roboIntro from '@/assets/images/events/Robotics/roboIntro.jpeg';
+import googleIntro from '@/assets/images/events/Google-SRE/GoogleIntro.jpeg';
+import aiIntro from '@/assets/images/events/AI-Hype/AiIntro.jpeg';
+import hackIntro from '@/assets/images/events/Hacking/hackIntro.jpeg';
+import workshopIntro from '@/assets/images/events/Workshop/workshopIntro.jpeg';
 export default {
   name: "EventsView",
   components: {
@@ -67,7 +74,7 @@ export default {
           id: 3,
           title: "Exploring the Future of Cybersecurity with Belgian Cyber Command",
           date:"12 November 2024",
-          introImage: "@/assets/cybercommand-event.jpg",
+          introImage: cyberIntro,
           introduction: `
             Cybersecurity is more critical than ever in our digital world, and few understand its complexities better than those on the front lines. On November 12, 2024, we had the incredible opportunity to welcome Colonel Gunther Godefridis, Director for Development & Readiness at Belgian Cyber Command, for an exclusive Tech&Meet session at Howest Campus Brugge. His insights into the evolving threats and defense strategies in cyberspace left a lasting impact on all attendees.
           `,
@@ -76,7 +83,7 @@ export default {
           id: 4,
           title: "Exploring the OpenShift Galaxy: A Hands-On Challenge at Hack The Future",
           date: "19 November 2024",
-          introImage: "@/assets/openshift-galaxy.jpg",
+          introImage: introHtf,
           introduction: `
             On 19 November 2024, we participated in Hack The Future, a hands-on tech event that brought together students and professionals 
             for a day of real-world challenges. One of the highlights was the OpenShift Galaxy track — a space-themed challenge centered 
@@ -88,7 +95,7 @@ export default {
           id: 5,
           title: "Innovating with Robotics & AI: Insights from Jo Lernout",
           date: "3 December 2024",
-          introImage: "@/assets/jo-lernout-event.jpg",
+          introImage: roboIntro,
           introduction: `
             At Howest University, we had the privilege of welcoming Jo Lernout to our campus for an inspiring session on robotics, AI, and entrepreneurship. 
             Known for his deep expertise and entrepreneurial mindset, Jo shared valuable insights on innovation, perseverance, and the challenges of bringing groundbreaking ideas to life.
@@ -98,7 +105,7 @@ export default {
           id: 6,
           title: "Google SRE: Understanding Site Reliability Engineering",
           date: "4 December 2024",
-          introImage: "@/assets/sre-event.jpg",
+          introImage: googleIntro,
           introduction: `
             In December 2024, we had the opportunity to attend an insightful guest lecture on Site Reliability Engineering (SRE), presented by Stefaan V. and Tijl Van den Broeck from Google. 
             This session shed light on what SRE truly is, how it differs from DevOps, and why it plays a crucial role in ensuring system reliability and business continuity.
@@ -108,7 +115,7 @@ export default {
           id: 7,
           title: "AI, the Reality Behind the Hype",
           date: "10 December 2024",
-          introImage: "@/assets/ai-event.jpg", 
+          introImage: aiIntro, 
           introduction: `
             Artificial Intelligence (AI) has become an integral part of our daily lives. From smart assistants to complex industrial applications, 
             AI is often portrayed as the driving force behind the future of technology. But where do we draw the line between reality and hype? 
@@ -120,7 +127,7 @@ export default {
           id: 8,
           title: "Hacking for Good: Lessons from 'Hack the Government' Winner Robbe Verwilghen",
           date: "17 December 2024",
-          introImage: "@/assets/hackthegov-intro.jpg",
+          introImage: hackIntro,
           introduction: `
             As one of the final Tech&Meet presentations of 2024 at Howest University, we had the privilege of welcoming Robbe Verwilghen, 
             a talented ethical hacker and the winner of the Hack the Government event hosted by the Center for Cybersecurity Belgium (CCB). 
@@ -131,7 +138,7 @@ export default {
           id: 9,
           title: "Ethical Hacking Workshop – Handelsschool Aalst",
           date: "28 January 2025",
-          introImage: "@/assets/aalst-workshop.jpg",
+          introImage: workshopIntro,
           introduction: `
             On Tuesday 28 January, we had the opportunity to lead a hands-on ethical hacking workshop for the 6th-year students of Application and Data Management at Handelsschool Aalst. 
             We explored the basics of cybersecurity, diving into SQL Injection, XSS, and IDOR—all in a fun and interactive classroom setting.
@@ -141,7 +148,6 @@ export default {
           id: 10,
           title: "Intern Ignite Event – Deloitte",
           date: "20 February 2025",
-          introImage: "@/assets/deloitte-ignite.jpg",
           introduction: `
             On Thursday, 20 February, we had the opportunity to attend an exciting event at Deloitte’s Zaventem office. 
             The afternoon kicked off with engaging sessions, inspiring talks, and a hands-on challenge that gave us a unique look into Deloitte’s culture and workplace.
