@@ -7,12 +7,12 @@
         My expertise includes full-stack development, cloud computing, and AI-driven solutions. I have also participated in international projects, including developing a project for business students and an AI course.
       </p>
       <div class="flex justify-center space-x-4">
-        <a href="#projects" class="bg-[#1E3A8A] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#162A6A] transition">
+        <router-link to="/projects" class="bg-[#1E3A8A] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#162A6A] transition">
           My Projects
-        </a>
-        <a href="#international-projects" class="bg-[#2563EB] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#1E40AF] transition">
-          International Projects
-        </a>
+        </router-link>
+        <router-link to="/international-experiences" class="bg-[#2563EB] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#1E40AF] transition">
+          International Experiences
+        </router-link>
       </div>
     </div>
   </section>
