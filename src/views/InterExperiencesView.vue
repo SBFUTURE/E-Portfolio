@@ -1,6 +1,7 @@
 <template>
   <NavBar />
   <section id="projects" class="bg-blue-50 py-20">
+     <h2 class="text-4xl font-semibold text-[#1E3A8A] mb-8 text-center">My International Experiences</h2>
     <div class="container mx-auto px-6">
       <!-- Loop Through All Projects -->
       <div v-for="(project, i) in projects" :key="i" class="bg-white rounded-lg shadow-lg p-8 mb-12">
