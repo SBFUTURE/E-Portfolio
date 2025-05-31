@@ -48,7 +48,7 @@ data() {
       {
         title: 'Brandy – Valencia',
         date: '25/06/2023 – 02/07/2023',
-        introImage: valencia, // Optional image path
+        introImage: valencia,
         introduction: 'At the end of the school year, I had the incredible opportunity to be selected for an international project in Valencia, Spain, called BrandY—a business simulation game co-funded by the Erasmus+ program.',
         sections: [
           {
