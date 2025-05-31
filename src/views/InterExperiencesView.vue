@@ -34,6 +34,8 @@
 <script>
 import NavBar from '@/components/NavBar.vue';
 import hdm from '@/assets/images/inter-experiences/stuttgart.jpg';
+import valencia from '@/assets/images/inter-experiences/valencia.jpg';
+import dublin from '@/assets/images/inter-experiences/dublin.jpg';
 
 export default {
   name: 'ProjectsView',
@@ -46,7 +48,7 @@ data() {
       {
         title: 'Brandy – Valencia',
         date: '25/06/2023 – 02/07/2023',
-        introImage: '', // Optional image path
+        introImage: valencia, // Optional image path
         introduction: 'At the end of the school year, I had the incredible opportunity to be selected for an international project in Valencia, Spain, called BrandY—a business simulation game co-funded by the Erasmus+ program.',
         sections: [
           {
@@ -105,8 +107,8 @@ data() {
       },
       {
         title: 'International Event - Exploring Dublin: A Week of Tech, Culture & Innovation',
-        date: '05/02/2024 – 09/02/2024', // add actual dates if you have them
-        introImage: '', // Optional image path
+        date: '05/02/2024 – 09/02/2024', 
+        introImage: dublin, 
         introduction: 'A week of discovery through cutting-edge tech companies, Irish culture, and team experiences.',
         sections: [
           {
