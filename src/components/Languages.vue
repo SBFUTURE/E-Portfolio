@@ -1,6 +1,6 @@
 <template>
   <section class="bg-white rounded-lg shadow-lg p-8 my-12 w-full">
-    <h2 class="text-3xl font-bold text-[#1E3A8A] mb-8 text-center">Languages</h2>
+    <h2 class="text-3xl font-bold text-[#1E3A8A] mb-8">Languages</h2>
     <ul class="space-y-4">
       <li
         v-for="(lang, idx) in languages"

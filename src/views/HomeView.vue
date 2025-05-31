@@ -5,8 +5,8 @@
       <HeroSection />
       <AboutSection />
       <SkillsSection :logos="logos" />
+      <ResumeSection />
       <ContactSection />
-      <CurriculumSection />
     </main>
     <Footer />
   </div>
@@ -18,7 +18,7 @@ import HeroSection from '@/components/HeroSection.vue';
 import AboutSection from '@/components/AboutSection.vue';
 import SkillsSection from '@/components/SkillsSection.vue';
 import ContactSection from '@/components/ContactSection.vue';
-import CurriculumSection from '@/components/CurriculumSection.vue';
+import ResumeSection from '@/components/ResumeSection.vue';
 import Footer from '@/components/Footer.vue';
 import html5Logo from '@/assets/SkillsPictures/html5Logo.png';
 import blazorLogo from '@/assets/SkillsPictures/blazorLogo.png';
@@ -32,8 +32,7 @@ export default {
     HeroSection,
     AboutSection,
     SkillsSection,
-    CurriculumSection,
-    ContactSection,
+    ResumeSection,
     Footer
   },
   data() {
