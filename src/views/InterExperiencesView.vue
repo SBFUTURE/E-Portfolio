@@ -34,8 +34,8 @@
 <script>
 import NavBar from '@/components/NavBar.vue';
 import hdm from '@/assets/images/inter-experiences/stuttgart.jpg';
-import valencia from '@/assets/images/inter-experiences/valencia.jpg';
-import dublin from '@/assets/images/inter-experiences/dublin.jpg';
+import valencia from '@/assets/images/inter-experiences/valencia.jpeg';
+import dublin from '@/assets/images/inter-experiences/dublin.jpeg';
 
 export default {
   name: 'ProjectsView',
