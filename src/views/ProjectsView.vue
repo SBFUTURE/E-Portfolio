@@ -23,7 +23,13 @@
               <img v-if="project.introImage" :src="project.introImage" alt="Project" class="w-full h-auto rounded-lg mb-6" />
               <p class="text-gray-700 mb-4 whitespace-pre-line">{{ project.content }}</p>
             </div>
-</div>
+             <!-- GitHub Link -->
+            <div v-if="project.gitlink" class="mt-auto">
+              <a :href="project.gitlink" target="_blank" rel="noopener" class="inline-block text-blue-700 hover:underline font-semibold">
+                View on GitHub
+              </a>
+            </div>
+        </div>
       </div>
     </div>
   </section>
@@ -44,6 +50,7 @@ export default {
           title:'Battleship',
           technology: 'Java, Javascript, CSS, HTML',
           date:'2nd Semester',
+          gitlink:'https://github.com/SBFUTURE/Battleship-project1-howest',
           content: `One of the most exciting projects from my first year was developing a full-stack web version of the classic Battleship board game.
                   We built the backend in Java and the frontend using JavaScript, HTML, and CSS.
 
@@ -58,6 +65,7 @@ export default {
           title:'Adria Project',
           technology: 'Vue.JS, Java (NGINX), HTML, TailwindCSS',
           date:'3th Semester',
+          gitlink:'https://github.com/SBFUTURE/adria-project-howest',
           content: `One of our major projects involved designing a smart transportation app aimed at improving connectivity within and between colonies. With easy access to transport, the goal was to strengthen the community by making it simpler for people to visit each other.
 
                     The app includes an interactive map that allows users to select starting points and destinations. Based on this, the app displays all available transport methods for the route. Users can filter through options and, upon selecting one, receive a complete overview of the journey. Real-time GPS tracking lets users monitor the progress of their trips directly within the app.
@@ -73,6 +81,7 @@ export default {
           title:'Deck Builder - Magic The Gathering',
           technology: '.NET, Blazor',
           date:'4th Semester',
+          gitlink:'https://github.com/SBFUTURE/magic-the-gathering-deck-builder',
           content:`For this project, I developed a web application inspired by Magic: The Gathering, using .NET for the backend and Blazor for the frontend. The app allows users to create, manage, and organize custom card decks by saving cards into personal collections.
 
               We used Microsoft SQL Server to handle the storage and retrieval of card data, making it easy to filter and search by attributes like name, type, or color. On the frontend, Blazor was used to build a responsive and interactive user experience. To manage user-specific data such as saved decks, MongoDB was implemented to ensure scalable and efficient storage.
@@ -92,6 +101,7 @@ export default {
           title:'Football La liga Match predictor',
           technology:'Python, Javascript, Vue.js, TailwindCSS',
           date:'4th Semester',
+          gitlink:'https://github.com/SBFUTURE/la-liga-predictor',
           content:`In this project, our team developed a web-based application to predict match outcomes (win, draw, or loss) in Spain’s La Liga. We began by creating a custom dataset through web scraping, collecting detailed statistics about each club’s performance—including wins, losses, draws, goals scored and conceded, formations, and other key metrics.
 
                     The backend data analysis and model training were done using Python in Jupyter Notebook. After exploring and cleaning the data, we split it into training and test sets and trained a Random Forest Classifier. We then optimized the model using GridSearchCV to improve prediction accuracy.
@@ -107,6 +117,7 @@ export default {
           title: 'Online Ordering System - Native Android App',
           technology:'Kotlin',
           date:'4th Semester',
+          gitlink:'https://github.com/SBFUTURE/online-order-system-native-mobile',
           content:`For this project, we built an Android online ordering system using Kotlin and Jetpack Compose. The app connects to a Laravel-based web API that powers an existing online ordering system. Since the API was hosted locally during development, we used Node.js as a bridge to transfer data between the Android app and the Laravel backend.
 
                   The main challenge was that the app couldn’t access the Laravel API directly on localhost due to network isolation between the emulator and the local server. To solve this, Node.js acted as an intermediary server to forward requests from the app to the Laravel API and send back the responses. While not suitable for production, this solution worked well for local development and testing.
@@ -128,6 +139,7 @@ export default {
           title: 'Online Ordering System - WebFrameworks',
           technology: 'Laravel, Javascript, Vue.JS, HTML, TailwindCSS, Vuetify',
           date: '4th Semester',
+          gitlink:'https://github.com/SBFUTURE/online-order-system-laravel-vue',
           content:`This project involved creating an online ordering platform for a local snack bar (frituur). The goal was to build a user-friendly web application where customers could place online orders and administrators could manage products and view incoming orders. The platform was built using HTML and CSS for layout, combined with Laravel and Vue.js for backend logic and dynamic frontend interaction.
 
                   The application was designed for two main types of users: customers and administrators. Customers can register and log in, browse the menu with detailed product information, select items to order, choose between pickup or delivery, and complete payments through secure gateways. They can also view their order history and receive real-time updates on their order status.
@@ -145,6 +157,7 @@ export default {
           title:'Self Learning Path',
           technology:'Python, .NET, Vue.JS, HTML, TailwindCSS',
           date:'5th Semester',
+          gitlink:'https://github.com/SBFUTURE/self-learning-path',
           content:`This project, developed for Delaware, focused on building an AI-powered platform designed to help teams achieve certifications through personalized learning paths. Leveraging Retrieval-Augmented Generation (RAG), the platform tailors learning content based on each team member’s role and skill level, enhancing the efficiency and relevance of the learning experience.
 
                   The backend was built using .NET to ensure a stable, scalable system, while the frontend employed Vue.js to deliver a responsive and intuitive user interface. As users progress through their personalized learning paths, the AI dynamically adapts the content to match their pace and development.
