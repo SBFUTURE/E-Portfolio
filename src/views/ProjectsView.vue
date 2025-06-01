@@ -167,6 +167,19 @@ export default {
                   Overall, this project combined AI-driven technology, modern web frameworks, and thoughtful user experience design to create a smart, supportive learning tool that promotes professional growth within teams at Delaware.
 
                   `
+        },
+        {
+          id:9,
+          title:'Portfolio Website',
+          technology:'Vue.JS, TailwindCSS, HTML',
+          date:'6th Semester',
+          gitlink:'https://github.com/SBFUTURE/E-portfolio',
+          content:`This portfolio website was created to showcase my skills and projects as a developer. It features a clean, modern design built with Vue.js and Tailwind CSS, ensuring a responsive and visually appealing user experience.
+
+                  The site includes sections for my biography, skills, and a detailed portfolio of projects. Each project entry highlights the technologies used, the challenges faced, and the outcomes achieved. The goal is to provide potential employers or collaborators with a clear understanding of my capabilities and past work.
+
+                  The website also incorporates interactive elements such as smooth scrolling, hover effects, and a contact form for easy communication. Overall, it serves as both a personal branding tool and a platform to demonstrate my development expertise.
+                  `
         }
         
         
