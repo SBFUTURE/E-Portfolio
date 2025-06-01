@@ -5,6 +5,7 @@ import EventsView from '@/views/EventsView.vue'
 import InterExperiencesView from '@/views/InterExperiencesView.vue'
 import EventsDetailView from '@/views/EventsDetailView.vue'
 import PrivacyPolicyView from '@/views/PrivacyPolicyView.vue'
+import TermsOfServiceView from '@/views/TermsOfServiceView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -38,6 +39,11 @@ const router = createRouter({
       path:'/privacy-policy',
       name: 'privacyPolicy',
       component: PrivacyPolicyView
+    },
+    {
+      path:'/terms-of-service',
+      name: 'termsOfService',
+      component: TermsOfServiceView
     }
   ],
 })

@@ -4,7 +4,7 @@
         <p class="mb-4 md:mb-0">&copy; 2025 Stephen Bombeke. All rights reserved.</p>
         <div class="flex space-x-4">
           <router-link to="/privacy-policy" class="hover:text-gray-300">Privacy Policy</router-link>
-          <a href="#" class="hover:text-gray-300">Terms of Service</a>
+          <router-link to="/terms-of-service" class="hover:text-gray-300">Terms of Service</router-link>
           <a href="mailto:Stephen.Bombeke@gmail.com" class="hover:text-gray-300">Contact</a>
         </div>
       </div>
