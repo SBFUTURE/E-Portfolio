@@ -4,6 +4,7 @@ import ProjectsView from '@/views/ProjectsView.vue'
 import EventsView from '@/views/EventsView.vue'
 import InterExperiencesView from '@/views/InterExperiencesView.vue'
 import EventsDetailView from '@/views/EventsDetailView.vue'
+import PrivacyPolicyView from '@/views/PrivacyPolicyView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/international-experiences',
       name: 'international-experiences',
       component: InterExperiencesView,
+    },
+    {
+      path:'/privacy-policy',
+      name: 'privacyPolicy',
+      component: PrivacyPolicyView
     }
   ],
 })
