@@ -24,6 +24,16 @@ export default {
     return {
       experiences: [
         {
+          title:'Internship - Deloitte',
+          period:'10-02-2025 – 23-05-2025',
+          tasks: [
+            'Part of Delivery Team',
+            'Assisting in building vertical features within Odoo',
+            'Learning Odoo platform (Functional & Technical)',
+            'Assisting with general tasks that are on the backlog'
+          ]
+        },
+        {
           title: 'Frituur Ledeberg - Student job',
           period: '01-10-2020 - Present',
           tasks: [
