@@ -3,7 +3,7 @@
   <section id="projects" class="bg-blue-50 py-20">
     <div class="w-full"> 
       <h2 class="text-4xl font-semibold text-[#1E3A8A] mb-8 text-center">My Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-16 gap-y-8 px-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-4 gap-y-6 px-4 md:gap-x-16 md:gap-y-8 md:px-16">
        <div v-for="(project, index) in projects.slice().reverse()" :key="project.id" class="project-post bg-white shadow-lg rounded-lg p-6 flex flex-col">
             <!-- Project Title -->
             <h3 class="text-2xl md:text-3xl font-bold text-[#1E3A8A] mb-2">{{ project.title }}</h3>
