@@ -35,10 +35,12 @@
       </div>
     </div>
   </section>
+  <Footer />
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue';
+import Footer from '@/components/Footer.vue';
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import baserowImg from '@/assets/images/events/Baserow/Event-Baserow.jpeg';
@@ -57,7 +59,8 @@ export default {
 
   name: 'EventDetailView',
   components: {
-    NavBar
+    NavBar,
+    Footer
   },
   props: ['id'],
 
