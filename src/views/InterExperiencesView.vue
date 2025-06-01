@@ -7,17 +7,17 @@
       <div v-for="(project, i) in projects" :key="i" class="bg-white rounded-lg shadow-lg p-8 mb-12">
         
         <!-- Project Title & Intro -->
-        <div class="flex items-center justify-between mb-1">
-          <h2 class="text-4xl font-semibold text-[#1E3A8A]">{{ project.title }}</h2>
-          <span class="text-sm text-gray-500 ml-4">{{ project.date }}</span>
-        </div>
+       <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-1">
+        <h2 class="text-xl md:text-3xl font-semibold text-[#1E3A8A] break-words">{{ project.title }}</h2>
+        <span class="text-sm md:text-base text-gray-500 mt-1 md:mt-0 md:ml-4 whitespace-nowrap">{{ project.date }}</span>
+      </div>
         <img v-if="project.introImage" :src="project.introImage" alt="Project " class="w-full mx-auto rounded-lg mb-6"  />
         <p class="text-gray-700 mb-4 whitespace-pre-line">{{ project.introduction }}</p>
 
         <!-- Project Sections -->
         <div class="space-y-6 text-gray-700">
           <div v-for="(section, index) in project.sections" :key="index" class="space-y-4">
-            <h3 class="text-2xl font-semibold text-[#1E3A8A]">{{ section.title }}</h3>
+            <h3 class="text-1xl md:text-2xl font-semibold text-[#1E3A8A]">{{ section.title }}</h3>
             <img v-if="section.image" :src="section.image" alt="Section " class="w-1/2 rounded-lg mb-4" />
             <p>{{ section.content }}</p>
           </div>
@@ -107,7 +107,7 @@ data() {
         ]
       },
       {
-        title: 'International Event - Exploring Dublin: A Week of Tech, Culture & Innovation',
+        title: 'Exploring Dublin: A Week of Tech, Culture & Innovation',
         date: '05/02/2024 – 09/02/2024', 
         introImage: dublin, 
         introduction: 'A week of discovery through cutting-edge tech companies, Irish culture, and team experiences.',

@@ -10,8 +10,8 @@
           class="blog-post bg-white shadow-lg rounded-lg p-6 flex flex-col"
         >
           <!-- Blog Title -->
-          <h3 class="text-3xl font-bold text-[#1E3A8A] mb-4">{{ blog.title }}</h3>
-          <p class="italic text-[#1E3A8A] mb-4">{{ blog.date }}</p>
+          <h3 class="text-1xl md:text-2xl font-bold text-[#1E3A8A] mb-4">{{ blog.title }}</h3>
+          <p class="italic text-[#1E3A8A] text-sm md:text-base mb-4">{{ blog.date }}</p>
           <!-- Blog Introduction -->
           <div class="mb-4">
             <img v-if="blog.introImage" :src="blog.introImage" alt="Event Introduction" class="w-full h-auto rounded-lg mb-6" />
