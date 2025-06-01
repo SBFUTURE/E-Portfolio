@@ -29,11 +29,13 @@
       </div>
     </div>
   </section>
+  <Footer />
 </template>
 
 
 <script>
 import NavBar from '@/components/NavBar.vue';
+import Footer from '@/components/Footer.vue';
 import hdm from '@/assets/images/inter-experiences/stuttgart.jpg';
 import valencia from '@/assets/images/inter-experiences/valencia.jpeg';
 import dublin from '@/assets/images/inter-experiences/dublin.jpeg';
@@ -41,7 +43,8 @@ import dublin from '@/assets/images/inter-experiences/dublin.jpeg';
 export default {
   name: 'ProjectsView',
   components: {
-    NavBar
+    NavBar,
+    Footer
   },
 data() {
   return {

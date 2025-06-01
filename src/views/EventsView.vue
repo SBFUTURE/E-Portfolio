@@ -28,10 +28,12 @@
       </div>
     </div>
   </section>
+  <Footer />
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue';
+import Footer from '@/components/Footer.vue';
 import baserowImg from '@/assets/images/events/Baserow/Event-Baserow.jpeg';
 import coltIntroImg from '@/assets/images/events/colt-event/IntroImage.png';
 import cyberIntro from '@/assets/images/events/CyberCommand/CyberCommandIntro.jpeg';
@@ -44,7 +46,8 @@ import workshopIntro from '@/assets/images/events/Workshop/workshopIntro.jpeg';
 export default {
   name: "EventsView",
   components: {
-    NavBar
+    NavBar,
+    Footer
   },
   data() {
     return {

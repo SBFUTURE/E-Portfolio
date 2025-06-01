@@ -1,4 +1,5 @@
 <template>
+  <div class="flex flex-col min-h-screen">
   <NavBar />
   <section id="event-detail" class="bg-blue-50 py-20">
     <div class="container mx-auto px-6">
@@ -35,7 +36,8 @@
       </div>
     </div>
   </section>
-  <Footer />
+  <Footer class="mt-auto"/>
+</div>
 </template>
 
 <script>
