@@ -132,7 +132,7 @@ export default {
                 },
                 {
                   "title": "Key Takeaways from the Event",
-                  "content": "During the session, Colonel Godefridis shared valuable insights on several critical topics:\n<ul>\n<li><strong>Understanding the Mission:</strong> The Colonel elaborated on how Cyber Command protects Belgium’s Defense infrastructure from growing cyber threats.</li>\n<li><strong>Collaboration is Key:</strong> Emphasizing the importance of partnerships across academia, industry, and government to strengthen Belgium’s cyber resilience.</li>\n<li><strong>A Vision for the Future:</strong> With over 20 years of military experience, Colonel Godefridis shared how Belgium is preparing for future challenges in the evolving landscape of cyber warfare.</li>\n</ul>"
+                  "content": "During the session, Colonel Godefridis shared valuable insights on several critical topics:\n\n- Understanding the Mission: The Colonel elaborated on how Cyber Command protects Belgium’s Defense infrastructure from growing cyber threats.\n- Collaboration is Key: Emphasizing the importance of partnerships across academia, industry, and government to strengthen Belgium’s cyber resilience.\n- A Vision for the Future: With over 20 years of military experience, Colonel Godefridis shared how Belgium is preparing for future challenges in the evolving landscape of cyber warfare."
                 },
                 {
                   "title": "A Night of Engagement and Inspiration",
