@@ -2,7 +2,7 @@
   <section id="hero" class="flex items-center justify-center bg-white py-16">
     <div class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center">
       <div class="md:w-1/2 text-center md:text-left">
-        <h1 class="text-5xl font-extrabold text-[#1E3A8A]">Stephen Bombeke</h1>
+        <h1 class="text-3xl md:text-5xl font-extrabold text-[#1E3A8A]">Stephen Bombeke</h1>
         <p class="text-gray-600 text-lg mt-4">Software Engineer | IT Enthusiast | Tech Innovator</p>
         <p class="text-gray-500 mt-4">
           Passionate about software development, AI, and IT solutions. Always eager to learn new technologies and build innovative projects.
