@@ -18,13 +18,13 @@
 
         <!-- Event Title -->
         <img v-if="event.introImage" :src="event.introImage" alt="Event Introduction" class="w-1/2 max-h-50  mx-auto rounded-lg mb-6" />
-        <h2 class="text-4xl font-semibold text-[#1E3A8A] mb-8">{{ event.title }}</h2>
+        <h2 class="text-2xl md:text-3xl font-semibold text-[#1E3A8A] mb-8">{{ event.title }}</h2>
         <p class="text-gray-700 mb-4">{{ event.introduction }}</p>
         
         <!-- Full Event Content -->
         <div class="space-y-6 text-gray-700">
           <div v-for="(section, index) in event.sections" :key="index" class="space-y-4">
-            <h3 class="text-2xl font-semibold text-[#1E3A8A]">{{ section.title }}</h3>
+            <h3 class="text-1xl md:text-2xl font-semibold text-[#1E3A8A]">{{ section.title }}</h3>
             <img v-if="section.image" :src="section.image" alt="Event Section" class="w-1/2  rounded-lg mb-4" />
             <p>{{ section.content }}</p>
           </div>
